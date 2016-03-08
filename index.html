@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>能力管理</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="js/tip/cTip.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/tip/cTip.js"></script>
+    <style  type="text/css">
+         .btn-primary{display:inline-block;height:28px;line-height:28px;border-radius: 3px;color: #0da2af;text-align: center;font-size:14px;padding:0 10px;border:1px solid #ccc;
+            background: #fff;}
+
+    </style>
+</head>
+<body>
+
+<a class="btn-primary" href="javascript:okConfirm(1);">确认</a>
+<a class="btn-primary" href="javascript:okDel(1);">提示</a>
+<a class="btn-primary" href="javascript:offline(1);">下线</a>
+<script type="text/javascript">
+    function offline(value){
+        layer.doubleQuestion("该能力已被订购，请确认是否进行下线操作。","预下线","强制下线",function(){
+//             alert('您点击了预下线');
+        },function(){
+//             alert('您点击了强制下线');
+        },function(){
+//            alert('您点击了取消');
+        });
+    }
+    function okConfirm(value){
+        layer.question("确定要删除吗？",function(){
+//            alert('您点击了确认操作');
+        },function(){
+//             alert('您点击了取消操作');
+        });
+    }
+    function okDel(value){
+        layer.warn("内容不能为空");
+    }
+
+</script>
+</body>
+</html>
